@@ -1,0 +1,15 @@
+{
+  "name": "ministerio_louvor_frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "escala_ministerio_louvor.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^8.3.2"
+  }
+}

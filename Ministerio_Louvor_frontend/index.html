@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escala do Ministério de Louvor</title>
+  <script src="escala_ministerio_louvor.css"></script>
+  <link rel="stylesheet" href="escala_ministerio_louvor.css">
+</head>
+<body>
+  <main class="container">
+    <h1>🎶 Escala do Ministério de Louvor</h1>
+    <p>Os membros e suas funções são carregados diretamente do banco de dados.</p>
+
+    <div class="grid">
+      <section class="card col-7">
+        <h2>📅 Montar escala</h2>
+
+        <div class="form-row">
+          <div>
+            <label for="scheduleDate">Data da escala</label>
+            <input id="scheduleDate" type="date" />
+          </div>
+          <div>
+            <label for="savedScheduleSelect">Escala salva</label>
+            <select id="savedScheduleSelect">
+              <option value="">Selecione...</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="availabilityNotice" class="notice"></div>
+        <div id="roleSelectors" class="roles-grid"></div>
+
+        <div class="actions">
+          <button id="generateBtn" class="btn btn-primary">✨ Gerar escala</button>
+          <button id="clearScaleBtn" class="btn btn-soft">Limpar</button>
+        </div>
+      </section>
+
+      <section class="card col-5">
+        <h2>📋 Texto da escala</h2>
+        <div id="scaleOutput" class="output">Escolha uma data e monte a escala.</div>
+        <div class="actions">
+          <button id="copyBtn" class="btn btn-primary">📋 Copiar texto</button>
+        </div>
+      </section>
+
+      <section class="card col-5">
+        <h2>🚫 Marcar indisponibilidade</h2>
+
+        <label for="unavailableMember">Membro</label>
+        <select id="unavailableMember">
+          <option value="">Selecione...</option>
+        </select>
+
+        <div class="form-row" style="margin-top:12px;">
+          <div>
+            <label for="unavailableDate">Data</label>
+            <input id="unavailableDate" type="date" />
+          </div>
+          <div>
+            <label for="unavailableReason">Motivo</label>
+            <input id="unavailableReason" type="text" placeholder="Opcional" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="addUnavailableBtn" class="btn btn-primary">Marcar indisponível</button>
+        </div>
+
+        <div id="unavailabilityList" class="list"></div>
+      </section>
+
+      <section class="card col-7">
+        <h2>👥 Resumo dos membros</h2>
+        <p>Essa área é somente leitura. Os membros vêm do SQL.</p>
+        <div id="memberList" class="list"></div>
+      </section>
+
+      <section class="card col-12">
+        <h2>🗂️ Escalas salvas</h2>
+        <div id="savedList" class="list"></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
